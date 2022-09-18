@@ -8,6 +8,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import com.kharin.anotification.ANotificationSettings;
 import com.kharin.anotification.ANotificationManager;
+import com.kharin.anotification.R;
 
 public class ANotificationAlarmReceiver extends BroadcastReceiver {
 
@@ -17,7 +18,7 @@ public class ANotificationAlarmReceiver extends BroadcastReceiver {
         String message = intent.hasExtra(ANotificationManager.MESSAGE_KEY) ? intent.getStringExtra(ANotificationManager.MESSAGE_KEY) : "Message";
         String channelId = intent.hasExtra(ANotificationManager.CHANNEL_ID_KEY) ? intent.getStringExtra(ANotificationManager.CHANNEL_ID_KEY) : "default";
         int code = intent.getIntExtra(ANotificationManager.REQUEST_CODE_KEY, 0);
-        int smallIconInt= intent.getIntExtra(ANotificationManager.REQUEST_CODE_KEY, -1);
+        int smallIconInt= intent.getIntExtra(ANotificationManager.REQUEST_CODE_KEY, R.drawable.ic_launcher_foreground);
         String aClass = intent.hasExtra(ANotificationManager.CLASS_KEY) ? intent.getStringExtra(ANotificationManager.CLASS_KEY):"";
         String openParameter = intent.hasExtra(ANotificationManager.OPEN_PARAMETER_KEY) ? intent.getStringExtra(ANotificationManager.OPEN_PARAMETER_KEY):"";
 
